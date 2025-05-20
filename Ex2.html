@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+<!-- Header -->
+<header class="bg-black flex justify-between items-center p-4 md:p-6">
+    <img src="image/Logo.png" alt="Logo" class="h-8 md:h-10 cursor-pointer">
+    
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block">
+        <ul class="text-white flex space-x-4 md:space-x-8 lg:space-x-12">
+            <li class="hover:text-blue-400"><a href="#">Home</a></li>
+            <li class="hover:text-blue-400"><a href="#">About</a></li>
+            <li class="hover:text-blue-400"><a href="#">Popular</a></li>
+            <li class="hover:text-blue-400"><a href="#">Featured</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mobile Navigation (hidden by default) -->
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 right-0 bg-black z-50 p-4">
+        <ul class="flex flex-col space-y-4">
+            <li class="hover:text-blue-400"><a href="#">Home</a></li>
+            <li class="hover:text-blue-400"><a href="#">About</a></li>
+            <li class="hover:text-blue-400"><a href="#">Popular</a></li>
+            <li class="hover:text-blue-400"><a href="#">Featured</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-black py-8 md:py-12 px-4 flex flex-col items-center">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">Choose The Best Car</h1>
+    
+    <div class="text-center mb-6">
+        <h3 class="text-xl md:text-2xl mb-2">Porsche Mission E</h3>
+        <img src="image/Especification home.png" alt="electric car" class="mx-auto w-48 md:w-64">
+    </div>
+
+    <img src="image/home 1.png" alt="car" class="w-full max-w-md md:max-w-2xl mb-8">
+
+    <div class="grid grid-cols-3 gap-4 md:gap-8 lg:gap-20 mb-8">
+        <div class="flex flex-col items-center">
+            <div class="bg-gray-900 h-10 w-10 rounded-full flex justify-center items-center">
+                <img src="image/Vector.png" alt="temperature-icon">
+            </div>
+            <h1 class="text-2xl md:text-3xl font-medium mt-4">24°</h1>
+            <h1 class="text-gray-600 text-sm md:text-base">TEMPERATURE</h1>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="bg-gray-900 h-10 w-10 rounded-full flex justify-center items-center">Km</div>
+            <h1 class="text-2xl md:text-3xl font-medium mt-4">873</h1>
+            <h1 class="text-gray-600 text-sm md:text-base">MILEAGE</h1>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="bg-gray-900 h-10 w-10 rounded-full flex justify-center items-center">
+                <i class="fa-solid fa-bolt text-white"></i>
+            </div>
+            <h1 class="text-2xl md:text-3xl font-medium mt-4">94%</h1>
+            <h1 class="text-gray-600 text-sm md:text-base">BATTERY</h1>
+        </div>
+    </div>
+
+    <div class="flex items-center justify-center mt-6 md:mt-10 hover:scale-105 transition-transform duration-300">
+        <div class="relative w-20 h-20 md:w-[100px] md:h-[100px] rounded-full bg-black flex items-center justify-center">
+            <div class="absolute inset-0 rounded-full border-4 border-green-500 shadow-[0_0_20px_#00ff99]"></div>
+            <div class="w-16 h-16 md:w-[80px] md:h-[80px] rounded-full border-4 border-green-500 flex items-center justify-center bg-black">
+                <span class="text-white text-xs md:text-sm font-semibold">START</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-black py-12 px-4 md:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
+        <img src="image/about 1.png" alt="about" class="w-full max-w-md md:max-w-lg">
+        
+        <div class="flex flex-col space-y-4 md:space-y-6 max-w-md">
+            <h1 class="font-medium text-2xl md:text-3xl">Machines With <br>Future Technology</h1>
+            <p class="text-gray-600 text-sm md:text-base">
+                See the future with high-performance electric cars produced by renowned brands. 
+                They feature futuristic builds and designs with new and innovative platforms 
+                that last a long time.
+            </p>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-6 md:px-8 rounded self-start">
+                Know more
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Cars Section -->
+<section class="bg-black py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="font-medium text-2xl md:text-3xl text-center mb-8 md:mb-12">Choose Your Electric Car <br>Of The Porsche Brand</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Car 1 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 md:p-6 shadow-lg">
+                <h2 class="text-white text-xl md:text-2xl font-bold mb-1">Porsche</h2>
+                <p class="text-gray-400 text-base md:text-lg mb-4">Turbo S</p>
+                <img src="image/brand1.png" alt="Porsche Taycan" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center text-gray-300 text-xs md:text-sm mb-2">
+                    <i class="fas fa-stopwatch mr-2"></i>
+                    <span>3.7 Sec</span>
+                    <i class="fas fa-tachometer-alt ml-4 mr-2"></i>
+                    <span>356 Km/h</span>
+                </div>
+
+                <div class="flex items-center text-gray-300 text-xs md:text-sm mb-4">
+                    <i class="fas fa-bolt mr-2"></i>
+                    <span>Electric</span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <span class="text-white text-lg md:text-xl font-semibold">$175,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 md:px-4 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 md:p-6 shadow-lg">
+                <h2 class="text-white text-xl md:text-2xl font-bold mb-1">Porsche</h2>
+                <p class="text-gray-400 text-base md:text-lg mb-4">Taycan</p>
+                <img src="image/Porsche-Taycan 1.png" alt="Porsche Taycan" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center text-gray-300 text-xs md:text-sm mb-2">
+                    <i class="fas fa-stopwatch mr-2"></i>
+                    <span>3.7 Sec</span>
+                    <i class="fas fa-tachometer-alt ml-4 mr-2"></i>
+                    <span>356 Km/h</span>
+                </div>
+
+                <div class="flex items-center text-gray-300 text-xs md:text-sm mb-4">
+                    <i class="fas fa-bolt mr-2"></i>
+                    <span>Electric</span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <span class="text-white text-lg md:text-xl font-semibold">$114,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 md:px-4 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 md:p-6 shadow-lg">
+                <h2 class="text-white text-xl md:text-2xl font-bold mb-1">Porsche</h2>
+                <p class="text-gray-400 text-base md:text-lg mb-4">Turbo S Cross</p>
+                <img src="image/brand3.png" alt="Porsche Taycan" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center text-gray-300 text-xs md:text-sm mb-2">
+                    <i class="fas fa-stopwatch mr-2"></i>
+                    <span>3.7 Sec</span>
+                    <i class="fas fa-tachometer-alt ml-4 mr-2"></i>
+                    <span>356 Km/h</span>
+                </div>
+
+                <div class="flex items-center text-gray-300 text-xs md:text-sm mb-4">
+                    <i class="fas fa-bolt mr-2"></i>
+                    <span>Electric</span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <span class="text-white text-lg md:text-xl font-semibold">$175,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 md:px-4 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="bg-black py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+        <img src="image/Features.png" alt="dataFeatures" class="w-full rounded-lg">
+    </div>
+</section>
+
+<!-- Featured Cars Section -->
+<section class="bg-black py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="font-medium text-2xl md:text-3xl text-center mb-8">Features Luxury Cars</h1>
+        
+        <div class="flex justify-center items-center gap-4 mb-8">
+            <div class="bg-blue-800 h-10 w-10 md:h-12 md:w-12 flex justify-center items-center rounded-xl">All</div>
+            <div class="bg-gray-800 h-10 w-10 md:h-12 md:w-12 flex justify-center items-center rounded-xl">
+                <img src="image/logo1-s.png" alt="logo1" class="w-6">
+            </div>
+            <div class="bg-gray-800 h-10 w-10 md:h-12 md:w-12 flex justify-center items-center rounded-xl">
+                <img src="image/logo2-s.png" alt="logo2" class="w-6">
+            </div>
+            <div class="bg-gray-800 h-10 w-10 md:h-12 md:w-12 flex justify-center items-center rounded-xl">
+                <img src="image/logo3-s.png" alt="logo3" class="w-6">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Featured Car 1 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg">
+                <h2 class="text-white text-xl font-bold mb-1">Tesla</h2>
+                <p class="text-gray-400 text-base mb-4">Model X</p>
+                <img src="image/featured1.png" alt="Porsche" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-white text-lg font-semibold">$98,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured Car 2 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg">
+                <h2 class="text-white text-xl font-bold mb-1">Tesla</h2>
+                <p class="text-gray-400 text-base mb-4">Model 3</p>
+                <img src="image/featured2.png" alt="Porsche" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-white text-lg font-semibold">$45,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured Car 3 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg">
+                <h2 class="text-white text-xl font-bold mb-1">Audi</h2>
+                <p class="text-gray-400 text-base mb-4">E-tron</p>
+                <img src="image/featured3.png" alt="Porsche" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-white text-lg font-semibold">$175,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured Car 4 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg">
+                <h2 class="text-white text-xl font-bold mb-1">Porsche</h2>
+                <p class="text-gray-400 text-base mb-4">Boxster 987</p>
+                <img src="image/featured5.png" alt="Porsche" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-white text-lg font-semibold">$126,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured Car 5 -->
+            <div class="rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 p-4 shadow-lg">
+                <h2 class="text-white text-xl font-bold mb-1">Porsche</h2>
+                <p class="text-gray-400 text-base mb-4">Panamera</p>
+                <img src="image/featured6.png" alt="Porsche" class="rounded-md mb-4 w-full">
+
+                <div class="flex items-center justify-between mt-4">
+                    <span class="text-white text-lg font-semibold">$126,900</span>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded-md">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Subscribe Section -->
+<section class="bg-gray-900 py-12 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+        <div class="flex flex-col space-y-4 md:space-y-6 max-w-md">
+            <h1 class="font-medium text-2xl md:text-3xl">Do You Want To Receive <br>Special Offers?</h1>
+            <p class="text-gray-400 text-sm md:text-base">
+                Be the first to receive all the information about our products and new cars 
+                by email by subscribing to our mailing list.
+            </p>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-6 md:px-8 rounded self-start">
+                Subscribe Now
+            </button>
+        </div>
+        
+        <img src="image/subscribe 1.png" alt="subscribe" class="w-full max-w-md mt-8 md:mt-0">
+    </div>
+</section>
+
+<!-- Brands Section -->
+<section class="bg-black py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-center">
+            <img src="image/logo1.png" alt="logo1" class="w-full max-w-[120px] mx-auto">
+            <img src="image/logo2.png" alt="logo2" class="w-full max-w-[120px] mx-auto">
+            <img src="image/logo3.png" alt="logo3" class="w-full max-w-[120px] mx-auto">
+            <img src="image/logo4.png" alt="logo4" class="w-full max-w-[120px] mx-auto">
+            <img src="image/logo5.png" alt="logo5" class="w-full max-w-[120px] mx-auto">
+            <img src="image/logo6.png" alt="logo6" class="w-full max-w-[120px] mx-auto">
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black py-12 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex flex-col space-y-4">
+            <img src="image/Logo.png" alt="logo" class="w-24">
+            <p class="text-gray-600 text-sm">
+                We offer the best electric cars of the most recognized brands in the world.
+            </p>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+            <h1 class="font-medium text-white text-lg">Company</h1>
+            <ul class="text-gray-600 text-sm space-y-2">
+                <li class="hover:text-white cursor-pointer">About</li>
+                <li class="hover:text-white cursor-pointer">Cars</li>
+                <li class="hover:text-white cursor-pointer">History</li>
+                <li class="hover:text-white cursor-pointer">Shop</li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+            <h1 class="font-medium text-white text-lg">Information</h1>
+            <ul class="text-gray-600 text-sm space-y-2">
+                <li class="hover:text-white cursor-pointer">Request a quote</li>
+                <li class="hover:text-white cursor-pointer">Find a dealer</li>
+                <li class="hover:text-white cursor-pointer">Contact us</li>
+                <li class="hover:text-white cursor-pointer">Services</li>
+            </ul>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+            <h1 class="font-medium text-white text-lg">Follow Us</h1>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto pt-8 mt-8 border-t border-gray-800 text-center">
+        <p class="text-gray-600 text-sm flex items-center justify-center">
+            <i class="far fa-copyright mr-1"></i> Bedimcode. All rights reserved
+        </p>
+    </div>
+</footer>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
